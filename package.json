@@ -1,0 +1,39 @@
+{
+  "name": "react-static-cms",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "react-static start",
+    "build": "yarn build:front && yarn build:back",
+    "build:front": "react-static build",
+    "build:back": "webpack --config webpack.admin.js",
+    "build:back:watch": "webpack --config webpack.admin.js --watch",
+    "stage": "react-static build --staging && yarn build:back",
+    "serve": "serve dist -p 3000"
+  },
+  "dependencies": {
+    "netlify-cms": "^2.2.0",
+    "netlify-identity-widget": "^1.4.14",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.3.12",
+    "react-markdown": "^3.6.0",
+    "react-router": "^4.3.1",
+    "react-static": "^5.9.12"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "gray-matter": "^3.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "klaw": "^2.1.1",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "serve": "^10.1.1"
+  }
+}

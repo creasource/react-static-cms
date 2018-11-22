@@ -1,0 +1,27 @@
+backend:
+  name: test-repo
+  branch: master
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    description: "Main website pages"
+    delete: false
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/Home.md"
+        fields:
+          - {label: 'Title', name: title, widget: string}
+          - {label: 'Description', name: description, widget: text}
+          - {label: 'Content', name: body, widget: markdown}
+      - label: "About"
+        name: "about"
+        file: "content/About.md"
+        fields:
+          - {label: 'Title', name: title, widget: string}
+          - {label: 'Description', name: description, widget: text}
+          - {label: 'Content', name: body, widget: markdown}
